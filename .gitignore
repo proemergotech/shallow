@@ -1,0 +1,10 @@
+# Test binary, build with `go test -c`
+*.test
+
+vendor/
+
+.env
+!.env.*
+
+bin/
+.idea
