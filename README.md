@@ -1,1 +1,1 @@
-shallow-go
+Shallow
