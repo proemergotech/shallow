@@ -1,6 +1,6 @@
-module gitlab.com/proemergotech/shallow-go
+module github.com/proemergotech/shallow
 
-go 1.13
+go 1.15
 
 require (
 	github.com/kr/pretty v0.1.0
