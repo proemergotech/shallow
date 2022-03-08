@@ -1,2 +1,1 @@
-Shallow-go
-==============================
+[![Go Reference](https://pkg.go.dev/badge/github.com/proemergotech/shallow.svg)](https://pkg.go.dev/github.com/proemergotech/shallow)
