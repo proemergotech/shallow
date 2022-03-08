@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/kr/pretty"
-	"github.com/pkg/errors"
+	"github.com/proemergotech/errors/v2"
 )
 
 type test struct {

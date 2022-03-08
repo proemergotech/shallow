@@ -1,10 +1,10 @@
 run:
   # timeout for analysis, e.g. 30s, 5m, default is 1m
-  deadline: 1m
-
+  timeout: 1m
+  
   # include test files or not, default is true
   tests: true
-
+  
   # by default isn't set. If set we pass it to "go list -mod={option}". From "go help modules":
   # If invoked with -mod=readonly, the go command is disallowed from the implicit
   # automatic updating of go.mod described above. Instead, it fails when any changes
@@ -20,14 +20,14 @@ linters:
   enable:
     - deadcode
     - errcheck
+    - exportloopref
     - goconst
     - goimports
-    - golint
+    - revive
     - gosec
     - govet
     - ineffassign
     - prealloc
-    - scopelint
     - staticcheck
     - structcheck
     - typecheck
@@ -48,9 +48,17 @@ issues:
   # excluded by default patterns execute `golangci-lint run --help`
   exclude:
     - "declaration of \"err\" shadows declaration at"
-
+    - "Consider preallocating `details`"
+    - "Consider preallocating `publicDetails`"
+    - "`ctx` is unused"
+  
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - goconst
+  
   # Maximum issues count per one linter. Set to 0 to disable. Default is 50.
   max-per-linter: 0
-
+  
   # Maximum count of issues with the same text. Set to 0 to disable. Default is 3.
   max-same-issues: 0
